@@ -71,11 +71,11 @@ def build_html_report(articles):
     html = f"""
     <html>
     <body style="font-family: Arial, sans-serif;">
-        <h1>AI Daily Brief for Libraries & Cultural Heritage</h1>
+        <h1>Mākslīgā intelekta dienas apskats bibliotēkām un kultūras mantojumam</h1>
 
-        <p><strong>Date:</strong> {today}</p>
+        <p><strong>Datums:</strong> {today}</p>
 
-        <h2>Relevant Updates</h2>
+        <h2>Aktuālākās ziņas</h2>
     """
 
     if not articles:
