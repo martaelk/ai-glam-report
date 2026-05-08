@@ -36,8 +36,9 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 EMAIL_TO = [
     "marmat.rtu@gmail.com",
-    "mkivkule@gmail.com",
-    "marta.kivkule@lnb.lv"
+    "marta.kivkule@lnb.lv",
+    "aija.uzula@lnb.lv",
+    "matiss.bolsteins@lnb.lv",
 ]
 
 
@@ -79,7 +80,7 @@ def build_html_report(articles):
     """
 
     if not articles:
-        html += "<p>No relevant news found today.</p>"
+        html += "<p>Šodien nav atrastas atbilstošas ​​ziņas.</p>"
 
     for article in articles:
         html += f"""
@@ -87,7 +88,7 @@ def build_html_report(articles):
             <h3>{article['title']}</h3>
 
             <p>
-            <strong>Source:</strong> {article['source']}
+            <strong>Avots:</strong> {article['source']}
             </p>
 
             <p>
@@ -95,7 +96,7 @@ def build_html_report(articles):
             </p>
 
             <p>
-            <a href="{article['link']}">Read more</a>
+            <a href="{article['link']}">Lasīt vairāk</a>
             </p>
 
             <hr>
@@ -113,7 +114,7 @@ def build_html_report(articles):
 def send_email(html):
     msg = MIMEMultipart("alternative")
 
-    msg["Subject"] = "AI Daily Brief for Libraries & Cultural Heritage"
+    msg["Subject"] = "MI aktuālie jaunumi"
     msg["From"] = EMAIL_FROM
     msg["To"] = EMAIL_FROM
     msg["Bcc"] = ", ".join(EMAIL_TO)
