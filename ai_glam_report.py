@@ -4,6 +4,8 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
+import json
+from pathlib import Path
 
 # News sources
 FEEDS = [
@@ -29,6 +31,9 @@ KEYWORDS = [
     "accessibility",
 ]
 
+HISTORY_FILE = "sent_articles.json"
+MAX_HISTORY = 500
+
 # Email settings
 EMAIL_FROM = "marmat.rtu@gmail.com"
 import os
@@ -41,9 +46,30 @@ EMAIL_TO = [
     "matiss.bolsteins@lnb.lv",
 ]
 
+def load_sent_articles():
+    if Path(HISTORY_FILE).exists():
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def save_sent_articles(sent_articles):
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(sent_articles[-MAX_HISTORY:], f, indent=2)
+
+
+def normalize_title(title):
+    return title.strip().lower()
 
 def fetch_news():
     articles = []
+
+    sent_articles = load_sent_articles()
+
+    sent_urls = {item["url"] for item in sent_articles}
+    sent_titles = {normalize_title(item["title"]) for item in sent_articles}
+
+    new_history_entries = []
 
     for feed_url in FEEDS:
         feed = feedparser.parse(feed_url)
@@ -55,13 +81,34 @@ def fetch_news():
 
             text = f"{title} {summary}".lower()
 
-            if any(keyword.lower() in text for keyword in KEYWORDS):
-                articles.append({
-                    "title": title,
-                    "summary": summary,
-                    "link": link,
-                    "source": feed.feed.get("title", "Unknown source")
-                })
+            if not any(keyword.lower() in text for keyword in KEYWORDS):
+                continue
+
+            normalized = normalize_title(title)
+
+            # Skip duplicates
+            if link in sent_urls or normalized in sent_titles:
+                print(f"Skipping duplicate: {title}")
+                continue
+
+            article = {
+                "title": title,
+                "summary": summary,
+                "link": link,
+                "source": feed.feed.get("title", "Unknown source")
+            }
+
+            articles.append(article)
+
+            new_history_entries.append({
+                "title": title,
+                "url": link,
+                "date": datetime.now().strftime("%Y-%m-%d")
+            })
+
+    # Save updated history
+    sent_articles.extend(new_history_entries)
+    save_sent_articles(sent_articles)
 
     return articles
 
