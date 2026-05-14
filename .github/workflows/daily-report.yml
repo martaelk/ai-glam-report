@@ -2,7 +2,7 @@ name: Daily AI GLAM Report
 
 on:
   schedule:
-    - cron: "0 5 * * *"
+  - cron: "17 4 * * *"
   workflow_dispatch:
 
 jobs:
