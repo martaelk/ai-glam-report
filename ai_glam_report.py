@@ -42,8 +42,8 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_TO = [
     "marmat.rtu@gmail.com",
     "marta.kivkule@lnb.lv",
-    "aija.uzula@lnb.lv",
-    "matiss.bolsteins@lnb.lv",
+    #"aija.uzula@lnb.lv",
+    #"matiss.bolsteins@lnb.lv",
 ]
 
 def load_sent_articles():
