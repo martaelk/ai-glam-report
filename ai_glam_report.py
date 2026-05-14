@@ -40,10 +40,10 @@ import os
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 EMAIL_TO = [
-    "marmat.rtu@gmail.com",
     "marta.kivkule@lnb.lv",
     "aija.uzula@lnb.lv",
     "matiss.bolsteins@lnb.lv",
+    "edite.punka@lnb.lv",
 ]
 
 def load_sent_articles():
@@ -179,7 +179,12 @@ def main():
 
     articles = fetch_news()
 
-    print(f"Found {len(articles)} relevant articles")
+    print(f"Found {len(articles)} new relevant articles")
+
+    # Do not send empty emails
+    if not articles:
+        print("No new articles found. Email will not be sent.")
+        return
 
     html = build_html_report(articles)
 
@@ -188,7 +193,6 @@ def main():
     send_email(html)
 
     print("Done!")
-
 
 if __name__ == "__main__":
     main()
