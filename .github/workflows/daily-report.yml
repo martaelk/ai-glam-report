@@ -2,8 +2,11 @@ name: Daily AI GLAM Report
 
 on:
   schedule:
-  - cron: "17 4 * * *"
+    - cron: "17 4 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   send-report:
@@ -23,3 +26,14 @@ jobs:
         env:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python ai_glam_report.py
+
+      - name: Commit updated article history
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add sent_articles.json
+
+          git commit -m "Update sent articles history" || echo "No changes"
+
+          git push
