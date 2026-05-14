@@ -1,1 +1,97 @@
-[]
+[
+  {
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "url": "https://openai.com/index/building-codex-windows-sandbox",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Our response to the TanStack npm supply chain attack",
+    "url": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "How NVIDIA engineers and researchers build with Codex",
+    "url": "https://openai.com/index/nvidia",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "AutoScout24 scales engineering with AI-powered workflows",
+    "url": "https://openai.com/index/autoscout24",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "How ChatGPT adoption broadened in early 2026",
+    "url": "https://openai.com/signals/research/2026q1-update",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "OpenAI Campus Network: Student club interest form",
+    "url": "https://openai.com/index/openai-campus-network-student-club-interest-form",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "OpenAI launches DeployCo to help businesses build around intelligence",
+    "url": "https://openai.com/index/openai-launches-the-deployment-company",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields",
+    "url": "https://deepmind.google/blog/alphaevolve-impact/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Announcing our partnership with the Republic of Korea",
+    "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+    "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Gemini Robotics-ER 1.6: Powering real-world robotics tasks through enhanced embodied reasoning",
+    "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable",
+    "url": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Relentless Curiosity: An Interview with Seth Langer",
+    "url": "https://blogs.loc.gov/thesignal/2026/04/relentless-curiosity-an-interview-with-seth-langer/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Content Authenticity and Provenance in the Age of Artificial Intelligence: A Call to Action for the Libraries, Archives and Museums Community",
+    "url": "https://blogs.loc.gov/thesignal/2026/04/content-authenticity-and-provenance-in-the-age-of-artificial-intelligence-a-call-to-action-for-the-libraries-archives-and-museums-community/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Fix-It+ Interview: Volunteer-powered Human-In-The-Loop transcription for the American Archive of Public Broadcasting",
+    "url": "https://blogs.loc.gov/thesignal/2026/04/aapb-sorenson-interview/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Thalia Lightstone: Reflections on Being a Librarian-in-Residence",
+    "url": "https://blogs.loc.gov/thesignal/2026/04/lightstone-reflections/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Using Open Source Tools to Capture Closed Captions and Timecode",
+    "url": "https://blogs.loc.gov/thesignal/2026/03/open-source-tools-captions-timecode/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "What\u2019s New Online at the Library of Congress: March 2026",
+    "url": "https://blogs.loc.gov/thesignal/2026/03/new-loc-march-2026/",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Stories Everywhere: An Interview with David Neil",
+    "url": "https://blogs.loc.gov/thesignal/2026/03/david-neil-interview/",
+    "date": "2026-05-14"
+  }
+]
