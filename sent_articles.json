@@ -303,5 +303,20 @@
     "title": "2026 Designing Storage Architectures for Digital Collections",
     "url": "https://blogs.loc.gov/thesignal/2026/06/2026-designing-storage-architectures/",
     "date": "2026-06-09"
+  },
+  {
+    "title": "How engineers at Nextdoor use Codex to build without limits",
+    "url": "https://openai.com/index/nextdoor",
+    "date": "2026-06-10"
+  },
+  {
+    "title": "Fluid, natural voice translation with Gemini 3.5 Live Translate",
+    "url": "https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/",
+    "date": "2026-06-10"
+  },
+  {
+    "title": "Measuring the impact of learning with AI in Sierra Leone and beyond",
+    "url": "https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/",
+    "date": "2026-06-10"
   }
 ]
